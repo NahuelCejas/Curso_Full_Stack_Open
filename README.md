@@ -14,3 +14,6 @@ En este repositorio se van a ir agregando las soluciones a los ejercicios del cu
 
 Crea un diagrama de secuencia que describa la situación en la que el usuario crea una nueva nota en la página https://studies.cs.helsinki.fi/exampleapp/notes escribiendo algo en el campo de texto y haciendo clic en el botón Save.
 
+El siguiente diagrama se creó usando https://www.mermaidchart.com/
+
+[respuesta 0.4](./Part0/0.4/Diagrama_de_secuencia.md)
