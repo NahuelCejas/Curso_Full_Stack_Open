@@ -14,8 +14,7 @@ En este repositorio se van a ir agregando las soluciones a los ejercicios del cu
 
 Crea un diagrama de secuencia que describa la situación en la que el usuario crea una nueva nota en la página https://studies.cs.helsinki.fi/exampleapp/notes escribiendo algo en el campo de texto y haciendo clic en el botón Save.
 
-<u>Solución</u> 
-
+**Solución**  
 El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [código](./Part0/0.4/Diagrama_de_secuencia.md)
 
 ![diagrama](./Part0/0.4/Diagrama_de_secuencia.png)
@@ -25,8 +24,7 @@ El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [c�
 
 Crea un diagrama que describa la situación en la que el usuario accede a la versión de aplicación de una sola página de la aplicación de notas en https://studies.cs.helsinki.fi/exampleapp/spa.
 
-<u>Solución</u> 
-
+**Solución**  
 El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [código](./Part0/0.5/Diagrama_de_secuencia_spa.md)
 
 ![diagrama](./Part0/0.5/Diagrama_de_secuencia_spa.png)
@@ -36,8 +34,7 @@ El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [c�
 
 Crea un diagrama que represente la situación en la que el usuario crea una nueva nota utilizando la versión de una sola página de la aplicación.
 
-<u>Solución</u> 
-
+**Solución**  
 El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [código](./Part0/0.6/Diagrama_de_secuencia_spa_nueva_nota.md)
 
 ![diagrama](./Part0/0.6/Diagrama_de_secuencia_spa_nueva_nota.png)
