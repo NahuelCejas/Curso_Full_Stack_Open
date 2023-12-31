@@ -6,7 +6,7 @@ La aplicación en la que comenzaremos a trabajar en este ejercicio se desarrolla
 
 Usa Vite para inicializar una nueva aplicación. Modifica main.jsx para que coincida con lo siguiente
 
-```
+```jsx
 import ReactDOM from 'react-dom/client'
 
 import App from './App'
@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 
 y App.jsx para que conincida con lo siguiente
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -54,7 +54,7 @@ Define los nuevos componentes en el archivo App.jsx.
 
 El cuerpo del componente App será aproximadamente como lo siguiente:
 
-```
+```jsx
 const App = () => {
   // const-definitions
 
@@ -72,7 +72,7 @@ const App = () => {
 **Solución**  
 Se modificó el código del archivo App.jsx obteniendo:  
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -133,7 +133,7 @@ export default App
 
 Refactoriza el componente Content para que no renderice ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes Part de los cuales cada uno representa el nombre y el número de ejercicios de una parte.
 
-```
+```jsx
 const Content = ... {
   return (
     <div>
@@ -151,7 +151,7 @@ Nuestra aplicación pasa información de una manera bastante primitiva en este m
 **Solución**  
 Se modificó el código del archivo App.jsx obteniendo:
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -217,7 +217,7 @@ export default App
 
 Avancemos para usar objetos en nuestra aplicación. Modifica las definiciones de las variables del componente App de la siguiente manera y también refactoriza la aplicación para que siga funcionando:
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = {
@@ -245,7 +245,7 @@ const App = () => {
 **Solución**  
 Se modificó el código del archivo App.jsx obteniendo:
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = {
@@ -316,7 +316,7 @@ export default App
 
 Y luego coloca los objetos en un array. Modifica las definiciones de las variables de App de la siguiente forma y modifica las otras partes de la aplicación en respectivamente:
 
-```
+```jsx
 const App = () => {
   const course = 'Half Stack application development'
   const parts = [
@@ -345,7 +345,7 @@ const App = () => {
 
 Sin embargo, no pases diferentes objetos como props separados del componente App a los componentes Content y Total. En su lugar, pásalos directamente como una matriz:
 
-```
+```jsx
 const App = () => {
   // definiciones de const
 
