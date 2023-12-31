@@ -1,8 +1,214 @@
-# React + Vite
+# Desarrollo de la aplicación courseinfo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1.1: información del curso, paso 1
 
-Currently, two official plugins are available:
+La aplicación en la que comenzaremos a trabajar en este ejercicio se desarrollará más a fondo en algunos de los siguientes ejercicios. En este y otros conjuntos de ejercicios futuros de este curso, es suficiente enviar solo el estado final de la aplicación. Si lo desea, también puedes crear un commit para cada ejercicio de la serie, pero esto es completamente opcional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Usa Vite para inicializar una nueva aplicación. Modifica main.jsx para que coincida con lo siguiente
+
+```
+import ReactDOM from 'react-dom/client'
+
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+```
+
+y App.jsx para que conincida con lo siguiente
+
+```
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = 'Fundamentals of React'
+  const exercises1 = 10
+  const part2 = 'Using props to pass data'
+  const exercises2 = 7
+  const part3 = 'State of a component'
+  const exercises3 = 14
+
+  return (
+    <div>
+      <h1>{course}</h1>
+      <p>
+        {part1} {exercises1}
+      </p>
+      <p>
+        {part2} {exercises2}
+      </p>
+      <p>
+        {part3} {exercises3}
+      </p>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </div>
+  )
+}
+
+export default App
+```
+
+y elimina los archivos adicionales App.css, y index.css, y el directorio assets.
+
+Desafortunadamente, toda la aplicación está en el mismo componente. Refactoriza el código para que conste de tres componentes nuevos: Header, Content y Total. Todos los datos aún residen en el componente App, que pasa los datos necesarios a cada componente mediante props. Header se encarga de representar el nombre del curso, Content representa las partes y su número de ejercicios y Total representa el número total de ejercicios.
+
+Define los nuevos componentes en el archivo App.jsx.
+
+El cuerpo del componente App será aproximadamente como lo siguiente:
+
+```
+const App = () => {
+  // const-definitions
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content ... />
+      <Total ... />
+    </div>
+  )
+}
+```
+<br>
+
+**Solución**  
+Se modificó el código del archivo App.jsx obteniendo:  
+
+```
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = 'Fundamentals of React'
+  const exercises1 = 10
+  const part2 = 'Using props to pass data'
+  const exercises2 = 7
+  const part3 = 'State of a component'
+  const exercises3 = 14
+
+
+  const Header = (props) => {
+    console.log(props)
+    return (
+      <>
+        <h1>{props.course}</h1>
+      </>
+    )  
+}
+
+const Content = (props) => {
+  console.log(props)
+  return (
+    <>
+      <p>{props.part1} {props.exercises1}</p>
+      <p>{props.part2} {props.exercises2}</p>
+      <p>{props.part3} {props.exercises3}</p>
+    </>
+  )  
+}
+
+const Total = () => { 
+  return (
+    <>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </>
+  )  
+}
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content 
+        part1={part1} exercises1={exercises1} 
+        part2={part2} exercises2={exercises2}
+        part3={part3} exercises3={exercises3}
+      />
+      <Total />
+    </div>
+  )
+}
+
+
+export default App
+```
+<br>
+
+### 1.2: información del curso, paso 2
+
+Refactoriza el componente Content para que no renderice ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes Part de los cuales cada uno representa el nombre y el número de ejercicios de una parte.
+
+```
+const Content = ... {
+  return (
+    <div>
+      <Part .../>
+      <Part .../>
+      <Part .../>
+    </div>
+  )
+}
+```
+
+Nuestra aplicación pasa información de una manera bastante primitiva en este momento, ya que se basa en variables individuales. Esta situación mejorará pronto en la parte 2, pero antes de eso, vamos a la parte 1b para aprender acerca de JavaScript.
+<br>
+
+**Solución**  
+Se modificó el código del archivo App.jsx obteniendo:
+
+```
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = 'Fundamentals of React'
+  const exercises1 = 10
+  const part2 = 'Using props to pass data'
+  const exercises2 = 7
+  const part3 = 'State of a component'
+  const exercises3 = 14
+
+
+  const Header = (props) => {
+    console.log(props)
+    return (
+      <>
+        <h1>{props.course}</h1>
+      </>
+    )  
+}
+
+const Part = (props) => {
+  console.log(props)
+  return (
+    <>
+      <p>{props.part} {props.exercises}</p>
+    </>
+  )  
+}
+
+const Content = (props) => {
+  console.log(props)
+  return (
+    <>      
+      <Part  part={part1} exercises={exercises1}/>
+      <Part  part={part2} exercises={exercises2}/>
+      <Part  part={part3} exercises={exercises3}/>
+    </>
+  )  
+}
+
+const Total = () => { 
+  return (
+    <>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </>
+  )  
+}
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content />
+      <Total />
+    </div>
+  )
+}
+
+
+export default App
+```
+
