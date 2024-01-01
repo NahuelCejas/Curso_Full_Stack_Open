@@ -42,4 +42,8 @@ El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [c�
 
 ### **Parte 1: Introducción a React**
 
-#### 1.1: información del curso, paso 1
+#### 1.1 - 1.5: información del curso
+
+En los ejercicios 1.1 a 1.5 se desarrolló una aplicación web sencilla que muestra información del curso y cantidad de ejerccios. El código de la aplicación se puede ver [aquí](./Part1/courseinfo/), y la aplicación obtenida se ve así:
+
+![courseinfoApp](./Part1/courseinfo/images/courseinfoApp.png)
