@@ -432,3 +432,44 @@ const Total = () => {
 
 export default App
 ```
+<br>
+
+### 1.5: información del curso, paso 5
+
+Llevemos los cambios un paso más allá. Cambia el curso y sus partes a un solo objeto JavaScript. Arregla todo lo que se rompa.
+
+```jsx
+const App = () => {
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
+
+  return (
+    <div>
+      ...
+    </div>
+  )
+}
+```
+<br>
+
+**Solución**  
+Se modificó el código del archivo App.jsx obteniendo:
+
+```jsx
+
+```
