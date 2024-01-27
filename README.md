@@ -47,3 +47,11 @@ El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [c�
 En los ejercicios 1.1 a 1.5 se desarrolló una aplicación web sencilla que muestra información del curso y cantidad de ejerccios. El código de la aplicación se puede ver [aquí](./Part1/courseinfo/), y la aplicación obtenida se ve así:
 
 ![courseinfoApp](./Part1/courseinfo/images/courseinfoApp.png)
+<br></br>
+
+#### 1.6 - 1.11: unicafe
+
+En los ejercicios 1.6 a 1.11 se desarrolló una aplicación web, la cuál recopila comentarios de clientes. Solo hay tres opciones para los comentarios: good (bueno), neutral y bad(malo).
+ El código de la aplicación se puede visualizar [aquí](./Part1/unicafe/), y la aplicación obtenida se ve así:
+
+![unicafeApp](./Part1/unicafe/images/solucion_imagen1_paso6.png)
