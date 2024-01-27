@@ -6,6 +6,14 @@ const Button = (props) => (
   </button>
 )
 
+// Componente que muestra la anécdota y el número de votos
+const Anecdote = ({ anecdote, votes }) => (
+  <>
+      <div>{anecdote}</div>
+      <div>has {votes} votes</div>
+  </>
+)
+
 const App = () => { 
   const anecdotes = [
     'If it hurts, do it more often.',
@@ -18,20 +26,35 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ];
 
+  // Estado para almacenar el índice de la anécdota actual seleccionada
   const [selected, setSelected] = useState(0)
 
+  //se crea un array de la longitud de anecdotes con sus elementos inicializados en 0
+  const [votes, setVotes] = useState(Array(anecdotes.length).fill(0))
+
+  // Manejador para cambiar a la siguiente anécdota de manera aleatoria
   const handleNextAnecdote = () => {
     // genera un número entero aleatorio entre 0 y la longitud de anecdotes - 1
     const randomIndex = Math.floor(Math.random() * anecdotes.length);
     setSelected(randomIndex)
-  }  
+  } 
+  
+  // Manejador para incrementar el número de votos de la anécdota actual
+  const handleVote = () => {
+    // Utiliza el método map para crear un nuevo array de votos
+    // Comprueba si el índice actual es igual al índice de la anécdota actualmente seleccionada
+    // Si es igual, incrementa el voto en 1 y devuelve el nuevo valor
+     // Si no es igual, devuelve el voto sin cambios
+    setVotes(votes.map((v, index) => (index === selected ? v + 1 : v)));
+  }
 
   return (
     <>
       <div>
-        {anecdotes[selected]}
+        <Anecdote anecdote={anecdotes[selected]} votes={votes[selected]}/>
       </div>
       <div>
+        <Button handleClick={handleVote} text="vote" />
         <Button handleClick={handleNextAnecdote} text="next anecdote" />
       </div>
     </>
