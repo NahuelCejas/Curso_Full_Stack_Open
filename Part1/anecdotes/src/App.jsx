@@ -39,6 +39,9 @@ const App = () => {
     setSelected(randomIndex)
   } 
   
+  //obtención del indice de la anecdota mas votada
+  const maxVotesIndex = votes.indexOf(Math.max(...votes));
+
   // Manejador para incrementar el número de votos de la anécdota actual
   const handleVote = () => {
     // Utiliza el método map para crear un nuevo array de votos
@@ -50,13 +53,12 @@ const App = () => {
 
   return (
     <>
-      <div>
-        <Anecdote anecdote={anecdotes[selected]} votes={votes[selected]}/>
-      </div>
-      <div>
-        <Button handleClick={handleVote} text="vote" />
-        <Button handleClick={handleNextAnecdote} text="next anecdote" />
-      </div>
+      <h2>Anecdote of the day</h2>
+      <Anecdote anecdote={anecdotes[selected]} votes={votes[selected]}/>       
+      <Button handleClick={handleVote} text="vote" />
+      <Button handleClick={handleNextAnecdote} text="next anecdote" />
+      <h2>Anecdote with most votes</h2>
+      <Anecdote anecdote={anecdotes[maxVotesIndex]} votes={votes[maxVotesIndex]}/>
     </>
     
   )
