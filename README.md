@@ -44,7 +44,7 @@ El siguiente diagrama se creó usando https://www.mermaidchart.com/ con este [c�
 
 #### 1.1 - 1.5: información del curso
 
-En los ejercicios 1.1 a 1.5 se desarrolló una aplicación web sencilla que muestra información del curso y cantidad de ejerccios. El código de la aplicación se puede ver [aquí](./Part1/courseinfo/), y la aplicación obtenida se ve así:
+En los ejercicios 1.1 a 1.5 se desarrolló una aplicación web sencilla que muestra información del curso y cantidad de ejercicios. El código de la aplicación se puede visualizar [aquí](./Part1/courseinfo/), y la aplicación obtenida se ve así:
 
 ![courseinfoApp](./Part1/courseinfo/images/courseinfoApp.png)
 <br></br>
@@ -55,3 +55,13 @@ En los ejercicios 1.6 a 1.11 se desarrolló una aplicación web, la cuál recopi
  El código de la aplicación se puede visualizar [aquí](./Part1/unicafe/), y la aplicación obtenida se ve así:
 
 ![unicafeApp](./Part1/unicafe/images/solucion_imagen1_paso6.png)
+<br></br>
+
+#### 1.12 - 1.14: anecdotes
+
+En los ejercicios 1.12 a 1.14 se desarrolló una aplicación web, la cuál muestra distintas anécdotas del campo de la ingeniería de software y permite darle votos a cada anécdota.
+ El código de la aplicación se puede visualizar [aquí](./Part1/anecdotes/), y la aplicación final obtenida se ve así:
+
+![anecdotesApp](./Part1/anecdotes/images/solucion_imagen1_paso3.png)
+<br></br>
+
